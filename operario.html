@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+
+	<link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+
+	<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>	
+
+	<link rel="stylesheet" type="text/css" href="operario.css">	
+
+	<title>Operarios</title>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default">
+			<img id="Imagenes/logo" src="SaludPrimero-logo-inicio.gif">
+		    <div id="navbar" class="collapse navbar-collapse">
+			    <ul class="nav navbar-right nav-pills">
+			        <li role="presentation" class="active"><a href="index.html">Inicio</a></li>
+			        <li><a href="imagenes.html">Galeria de imagenes</a></li>
+			        <li><a href="" onclick="window.close()">Salir</a></li>
+			    </ul>
+		    </div>
+		</nav>	
+		<h1>Bienvenido: Wellington</h1>
+	</header>
+	<section id="introduccion">
+		<p>
+			En esta pagina usted, como operario de nuestra empresa SaludPrimero S.A., sera capas de
+			realizar sus labores en linea, podra ingresar la informacion de las muestras medicas de
+			nuestros pacientes, modificarlas o incluso eliminarlas.<br/>
+			Las opciones que permiten realizar estas tareas se muestran a continuacion:
+		</p>
+	</section>
+	<hr>
+	<section id="actividades">
+		<div id="botones-principales" class="row">
+			<div class="col-sm-4">
+				<button id="btn-ingresar-muestra" class="btn btn-primary btn-lg btn-principal" type="button">
+				<img class="imagen-accion" src="Imagenes/ingreso.png"><p>Ingresar muestra</p></button>
+			</div>
+			<div class="col-sm-4">
+				<button id="btn-modificar-muestra" class="btn btn-primary btn-lg btn-principal" type="button">
+				<img class="imagen-accion" src="Imagenes/modificar.png"><p>Modificar muestra</p></button>
+			</div>
+			<div class="col-sm-4"></div>			
+		</div>
+		<br/>
+		<div id="boton-estadisticas" class="row">
+			<div class="col-sm-4">
+				<button id="btn-eliminar-muestra" class="btn btn-primary btn-lg btn-principal" type="button">
+				<img class="imagen-accion" src="Imagenes/borrar.png"><p>Eliminar muestra</p></button>			
+			</div>
+			<div class="col-sm-4">
+				<button id="btn-generar-reporte-estadistico" class="btn btn-primary btn-lg btn-principal" type="button">
+				<img class="imagen-accion" src="Imagenes/estadisticas.png"><p>Reporte estadistico</p></button>
+			</div>
+			<div class="col-sm-4"></div>			
+		</div>			
+		<form id="informacion-muestra" class="container">
+			<h2>Informacion de las muestras</h2>
+			<hr/>			    
+			<p>Codigo de la muestra:</p>									
+			<input id="codigo" type="text" class="form-control" placeholder="Ingrese el codigo de la muestra" required="" autofocus="">
+			<br/>
+			<p>Nombre completo del paciente:</p>									
+			<input id="nombre-paciente" type="text" class="form-control" placeholder="Ingrese el nombre completo del paciente" required="" autofocus="">
+			<br/>
+			<p>Centro medico origen:</p>								
+			<input id="centro" type="text" class="form-control" placeholder="Ingrese el centro medico origen" required="" autofocus="">
+			<br/>
+			<p>Fecha de ingreso:</p>
+			<input id="fecha" type="date" class="form-control" placeholder="Ingrese la fecha de ingreso" required="" autofocus="">
+			<br/>						
+			<p>Tipos de examenes:</p>					
+			<select id="examenes" class="form-control">
+				<option>Hemograma completo</option>
+			  	<option>Urinalisis completo</option>
+			  	<option>Heces por parasito, sangre oculta</option>
+			  	<option>Perfil renal</option>
+			  	<option>Perfil hepatico</option>
+			  	<option>Perfil triode</option>
+			  	<option>Panel basico metabolico</option>
+			</select>					
+			<br/>
+			<p>Laboratorios:</p>					
+			<select id="laboratorios" class="form-control">
+				<option value="0">Laboratorio quimico</option>
+			  	<option value="1">Laboratorio de biologia</option>
+			  	<option value="2">Laboratorio clinico</option>
+			  	<option value="3">Laboratorio de metrologia nacional</option>
+			  	<option value="4">Laboratorio de metrologia intermedio</option>
+			  	<option value="5">Laboratorio de metrologia industrial</option>
+			</select>					
+			<br/>
+			<p>Codigo de barras:</p>
+			<input id="codigo-barras" type="text" class="form-control" placeholder="Ingrese el codigode barras" required="" autofocus="">
+			<br/>
+			<button id="btn-generar-codigo-barras" class="btn" type="button">Generar codigo de barras</button>
+			<br/><br/>
+			<table id="contenedor-codigo-barras">
+				<tr>
+					<td style='padding:10px; text-align:center; font-size:15px; font-family:Arial,Helvetica;'>
+					</td>
+					<td>
+						<img id="imagen-codigo-barras" src='http://barcode.tec-it.com/barcode.ashx?data=ABC-abc-1234&code=Code128&dpi=96' alt='Barcode Generator TEC-IT'/>
+					</td>
+				</tr>
+			</table>																			
+			<hr/>
+			<button id="btn-confirmar-datos" class="btn btn-accion" type="button">Confirmar</button>
+			<button id="btn-volver-de-datos" class="btn btn-accion" type="button">Volver</button>
+			<br/><br/>
+		</form>
+		<form id="seleccion-muestra" class="container">
+		    <h2>Listado de las muestras</h2>
+		    <hr/>			    
+	    	<p>Seleccione la muestra a modificar:</p>	
+			<select id="muestras" class="form-control">
+				<option value="0">Muestra de examen cardiaco</option>
+				<option value="1">Muestra de contaminacion en la sangre</option>
+				<option value="2">Muestra de ensayo clinico</option>
+			</select>						
+			<br/>
+			<hr/>														
+			<button id="btn-confirmar-seleccion" class="btn btn-accion" type="button">Confirmar</button>
+			<button id="btn-volver-de-seleccion" class="btn btn-accion" type="button">Volver</button>
+			<br/><br/>
+		</form>
+		<form id="pantalla-reporte-estadistico" class="container">
+		    <h2>Reporte estadistico</h2>
+		    <hr/>			    
+	    	<p>Seleccione el tipo de reporte:</p>	
+			<select id="forma-reporte" class="form-control">
+				<option value="0">Reporte vertical</option>
+				<option value="1">Pastel</option>		
+			</select>						
+			<br/>
+	    	<p>Numero de muestras por:</p>	
+			<select id="datos-reporte" class="form-control">
+				<option value="0">Mes</option>
+				<option value="1">Enfermedad</option>
+				<option value="2">Laboratorio</option>
+				<option value="3">Ciudad</option>
+			</select>
+			<br/>			
+			<hr/>														
+			<button id="btn-confirmar-reporte" class="btn btn-accion" type="button">Confirmar</button>
+			<button id="btn-volver-de-reporte" class="btn btn-accion" type="button">Volver</button>
+			<br/><br/>
+			<img id="reporte" src="http://chart.apis.google.com/chart?chs=400x100&cht=bhg&chco=e5f867|aaaaaa|596605&chd=t:70,20,10&chdl=Milagro+%286+elementos%29|Quito%281+elementos%29|Guayaquil+%283+elementos%29" width="400" height="100">
+			<br/><br/>
+		</form>			
+		<div id="mensaje-informacion" class="modal">
+	  		<div class="modal-content">		  		
+		    	<div class="modal-header">
+		      		<span id="cierre-mensaje-informacion" class="close">×</span>
+		      		<h2 id="titulo-mensaje"></h2>
+		   		</div>
+			    <div class="modal-body">
+			    	<img id="imagen-mensaje" src="">
+					<p id="contenido-mensaje"></p>
+					<button id="boton-aceptar" class="btn btn-primary btn-lg">Aceptar</button>
+			    </div>		      	
+		    </div>
+		</div>		
+	</section>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>	
+
+	<script src="operario.js"></script>
+</body>
+</html>

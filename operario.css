@@ -1,0 +1,190 @@
+
+#navbar {
+	float: right;
+}
+
+#logo {
+	position: absolute;
+	height: 3em;
+	background: transparent;
+}
+
+body {
+	font-family: "Signika";
+}
+
+body > header > h1 {
+	color: red;
+}
+
+#actividades {
+	position: relative;
+	text-align: center;
+}
+
+.btn-principal {
+	width: 80%;
+	height: 3em;
+	background: orange;
+	border-color: orange;
+	color: yellow;
+}
+
+.imagen-accion {
+	width: 3em;
+	height: 2em;
+	float: left;
+}
+
+.btn-principal > p {
+	font-size: 125%;
+}
+
+#contenedor-codigo-barras {
+	text-align: center;
+	display: none;
+}
+
+#informacion-muestra,
+#seleccion-muestra,
+#pantalla-reporte-estadistico {
+	position: relative;
+	display: none;
+	width: 50%;
+	border: 3px solid black;
+	border-radius: 3px 3px 3px 3px;
+}
+
+#informacion-muestra > h2,
+#informacion-muestra > p,
+#informacion-muestra > input,
+#informacion-muestra > select,
+#informacion-muestra > table,
+#seleccion-muestra > h2,
+#seleccion-muestra > p,
+#seleccion-muestra > input,
+#seleccion-muestra > select,
+#pantalla-reporte-estadistico > h2,
+#pantalla-reporte-estadistico > p,
+#pantalla-reporte-estadistico > select {
+	position: relative;
+	text-align: left;
+	font-family: "Open Sans";
+	font-size: 125%;
+}
+
+#btn-generar-codigo-barras {
+	position: relative;
+	text-align: center;
+	font-family: "Open Sans";
+	font-size: 125%;
+	width: 50%;	
+	opacity: .4;
+	color: black;
+	border-color: black;
+  	background: white;	
+}
+
+#informacion-muestra > h2,
+#seleccion-muestra > h2 {
+	text-align: center;
+	font-size: 200%;
+	font-weight: bold;
+	color: orange;
+}
+
+.btn-accion {
+	width: 30%;	
+	opacity: .4;
+	color: orange;
+	border-color: orange;
+  	background: white;
+	font-size: 200%;
+	font-family: "Open Sans";
+}
+
+#reporte {
+	position: relative;
+	width: 50%;
+	display: none;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */    
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.close {
+    color: white;
+    background: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    width: 5%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.close :hover,
+.close :focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+}
+
+.modal-header > h2 {
+  text-align: center;
+  font-family: "Orbitron";
+  color: white;
+  font-weight: bold;
+}
+
+.modal-body {
+	position: relative;
+	height: 80%;
+}
+
+#imagen-mensaje {
+  position: relative;
+  width: 3em;
+  height: 3em;
+}
+
+#boton-aceptar {
+	width: 20%;
+	height: 3em;
+	border-radius: 20px 20px 20px 20px;
+	opacity: .4;
+	color: white;
+	border-color: white;
+	font-size: 100%;
+	font-family: "Orbitron";
+  	float: bottom;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: white;
+}

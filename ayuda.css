@@ -1,0 +1,23 @@
+
+#navbar {
+	float: right;
+}
+
+#logo {
+	position: absolute;
+	height: 3em;
+	background: transparent;
+}
+
+h1 {
+	text-align: center;
+}
+
+p {
+	text-align: justify;
+}
+
+section {
+	position: relative;
+	width: 90%;
+}
